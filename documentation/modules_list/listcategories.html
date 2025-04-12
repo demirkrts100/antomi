@@ -1,0 +1,264 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Pos list categories</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.ico.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		
+		$('#documenter_sidebar #documenter_nav li a').on('click', function(){
+			if($(this).hasClass('open_menu')) {
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );   
+				$(this).removeClass( 'open_menu' );  
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideUp();
+				$(this).parent().siblings().find('ul').slideUp();
+			}
+			else {	
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );  
+				$(this).parent().siblings().find('ul').slideUp();
+				$(this).addClass( 'open_menu' );   
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideDown();
+		
+			}
+			
+		});
+		(function(){
+			$(window).ready(function () {
+				
+				/ Page Scroll to id fn call /
+				$("#documenter_nav li a ").mPageScroll2id({
+					highlightSelector:"#documenter_nav li a ",
+					//offset:100,
+				});
+			});
+		})(jQuery); 
+	});
+	</script>
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#989898;}
+		::selection{background:#333636;color:#e53131;}
+		a{color:#e53131;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #e53131, #006673);
+			  background-image: -ms-linear-gradient(top, #e53131, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 #fe5b5a), from(#EEE), to(#006673);
+			  background-image: -webkit-linear-gradient(top, #e53131, #006673);
+			  background-image: -o-linear-gradient(top, #e53131, #006673);
+			  background-image: linear-gradient(to top, #e53131, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e53131', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #e53131 #e53131 #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#EEE;color:#333;}
+		#documenter_sidebar ul{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a:hover{color:#e53131;}
+		#documenter_sidebar ul a.open_menu,#documenter_sidebar ul a.mPS2id-highlight{color:#e53131;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+	<div class="container-fluid clearfix">
+		<div id="documenter_sidebar">
+			<a href="http://posthemes.com/" id="documenter_logo">
+				<img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="logo"/>
+			</a>
+			<ul id="documenter_nav">
+				<li><a href="#documenter_cover"><span class="icon fa fa-home"></span> Start</a></li>
+				<li><a href="#frontend" title="frontend"><span class="icon fa fa-check-square"></span> Frontend Appearance</a></li>
+				<li><a href="#config" title="Configure Pos list categories"><span class="icon fa fa-cogs"></span> Configure Pos list categories</a></li>
+				<li><a href="#createitem" title="Configure Pos list categories"><span class="icon fa fa-plus-circle"></span> How to create new item</a></li>
+				<li><a href="#translate" title="translate"><span class="icon fa fa-language"></span> Translate module</a></li>
+				<li><a href="#support" title="support"><span class="icon fa fa-bell"></span> Posthemes Support</a></li>
+			</ul>
+			<div id="documenter_copyright">Copyright ©<a href="http://posthemes.com/">Posthemes</a>.<br>All rights reserved.
+			</div>
+		</div>
+		<div id="documenter_content">
+		<!-- Start -->
+		<section id="documenter_cover">
+		<h1>Pos list categories</h1>
+		<hr>
+		<p><i>Shows new products in slider on hompage</i></p>
+		<br>
+		<p>And here you can find out more about theme updates, new features and about our upcoming themes:</p>
+		<p>-	Follow us on <a href="https://www.facebook.com/posthemes"><b> Facebook </b></a></p>
+		<p>- 	Follow us on <a href="https://twitter.com/posthemes"><b> Twitter </b></a></p>
+		<p>-	Follow us on <a href="http://posthemes.com/"><b> Posthemes </b></a></p>
+		<br>
+		<p><i><b>PosThemes,</b></i></p>
+		</section>
+		<!-- End Start -->
+		
+		<!-- Frontend Appearance -->
+		<section id="frontend">
+		<div class="page-header"><h2>Frontend Appearance</h2></div>
+		<p> <img src="assets/images/frontend_listcate.jpg"  alt="frontend list category" /> </p>
+		</section>
+		<!-- End Frontend Appearance -->
+		
+		<!-- Configure Pos list categories -->
+		<section id="config">
+		<div class="page-header"><h2>Configure Pos list categories</h2></div>
+		<p><i>Shows new products in slider on hompage.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Pos list categories</strong>, click "<strong>Configure</strong>" button.</p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+				<p><img src="assets/images/config_listcate.jpg"  alt="config_listcate" /></p>
+			<p>We got:</p>
+				<p>* In <strong>SETTINGS</strong>:</p>
+				<ul>
+					<li><strong>Number items</strong>:  Number items which is shown on resolution.</li>
+					<li><strong>Slide speed</strong>: Set the speed of slide</li>
+					<li><strong>Auto time</strong>: Set delay time when slider run automatically. Default is 3000ms.</li>
+					<li><strong>Auto play</strong>: Select Yes to play automatically (<i>Default is 1000ms</i>)</li><li><strong>Show Next/Back control</strong>: Select <i>Yes/No</i> to show/hide <i>Next/Back</i> button</li>
+					<li><strong>Show navigation control</strong>: Select <i>Yes/No</i> to show/hide navigation</li>
+					<li><strong>Responsive</strong>: Allow to set number of column for each device</li>
+				</ul>
+				<p>* In <strong>ITEMS LIST</strong>:</p>
+				<ul>
+					<li class="img-in"><img src="assets/images/config_itemlist.jpg" alt="" />
+					<li>Click icon <img src="assets/images/enable.jpg" alt="" /> to hide item</li>
+					<li>Click icon <img src="assets/images/edit2.jpg" alt="" /> to edit item</li>
+					<li>Click icon <img src="assets/images/delete.jpg" alt="" /> to delete item</li>
+					<p>If you click icon <img src="assets/images/edit2.jpg" alt="" />, you will configure parameters as you want</p>
+					<li class="img-in"><img src="assets/images/config_itemlist2.jpg" alt="" />
+					<li><strong>Image/Thumbnail</strong>: Click on <strong>Choose a file</strong> to upload image thumbnail</li>
+					<li><strong>Select category</strong>: Select category which will be shown on homepage</li>
+					<li><strong>Choose the subcategories:</strong>: Select subcategories which will be shown</li>
+					<li><strong>Description</strong>: Description for this item</li>
+					<li><strong>Enabled</strong>: Select <i>Yes/No</i> to show/hide this item</li>
+				</ul>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<!-- End Configure Pos list categories -->
+		
+		<!-- Create new item -->
+		<section id="createitem">
+		<div class="page-header"><h2>How to create new item</h2></div>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Pos list categories</strong>, click "<strong>Configure</strong>" button.</p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+				<p><img src="assets/images/config_listcate.jpg"  alt="config_listcate" /></p>
+				<p>* In <strong>ITEMS LIST</strong> part:</p>
+				<ul>
+					<li>Click icon <img src="assets/images/add_new_menu1.jpg" alt="" /> to add new item</li>
+					<li class="img-in"><img src="assets/images/config_itemlist.jpg" alt="" />
+					<li><strong>Image/Thumbnail</strong>: Click on <strong>Choose a file</strong> to upload image thumbnail</li>
+					<li><strong>Select category</strong>: Select category which will be shown on homepage</li>
+					<li><strong>Choose the subcategories:</strong>: Select subcategories which will be shown</li>
+					<li><strong>Description</strong>: Description for this item</li>
+					<li><strong>Enabled</strong>: Select <i>Yes/No</i> to show/hide this item</li>
+				</ul>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<!-- End Create new item -->
+		
+		<!-- Translate module -->
+		<section id="translate">
+		<div class="page-header"><h2>Translate module</h2></div>
+		<h4>1. How to translate title</h4>
+			<ul>
+				<li> Login your prestashop admin</li>
+				<li> Go to <strong>International</strong> > <strong>Translations</strong></li>
+				<li class="img-in"><img src="assets/images/modules_translations.jpg" alt="" />
+				<li>At "<strong>Modify translations</strong>" section:
+					<ul>
+						<li><strong>Type of translation</strong> : <i>Themes translations</i></li>
+						<li><strong>Select your theme</strong> : Select <i>theme_antomi1</i></li>
+						<li><strong>Select your language</strong> : Choose language you want to translate</li>
+					</ul>
+				</li>
+				<li>Choose <strong>Modify</strong></li>
+				<li>Then Search <i>titles</i> or <i>text</i> need translate</li>
+				<li>After typing your language, click <strong>Save and stay</strong> or <strong>Save</strong> to finish.</li>
+			</ul>
+		<h4>2. How to translate categories</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Catalog</strong> > <strong>Catagories</strong>
+			<li class="img-in"><img src="assets/images/catalog_categories.jpg" alt="" />
+			<li>On selected catagory, click "<strong>Edit</strong>" button. 
+			<li class="img-in"><img src="assets/images/category_config.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Name</strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/category_config2.jpg" alt="" />
+		</ul>
+		</section>
+		<!-- End Translate title -->
+		
+		<!-- Posthemes Support-->
+		<section id="support">
+		<div class="page-header"><h2>Posthemes Support</h2></div>
+		<p>Support Working time: Monday - Friday</p>
+		<p>Estimated ticket and answers review time: 1-3 business days.</p>
+		<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+		<p><i>Send us email to <a href="mailto:posthemes@gmail.com">posthemes@gmail.com</a>.</i></p>
+		</section>
+		</div>
+	</div>
+	<span id="back-top"><a href="javascript(0)"><span class="icon fa fa-arrow-up"></span></a></span>
+</body>
+</html>

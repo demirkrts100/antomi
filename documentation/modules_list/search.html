@@ -1,0 +1,180 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Pos search products by category</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.ico.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		
+		$('#documenter_sidebar #documenter_nav li a').on('click', function(){
+			if($(this).hasClass('open_menu')) {
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );   
+				$(this).removeClass( 'open_menu' );  
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideUp();
+				$(this).parent().siblings().find('ul').slideUp();
+			}
+			else {	
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );  
+				$(this).parent().siblings().find('ul').slideUp();
+				$(this).addClass( 'open_menu' );   
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideDown();
+		
+			}
+			
+		});
+		(function(){
+			$(window).ready(function () {
+				
+				/ Page Scroll to id fn call /
+				$("#documenter_nav li a ").mPageScroll2id({
+					highlightSelector:"#documenter_nav li a ",
+					//offset:100,
+				});
+			});
+		})(jQuery); 
+	});
+	</script>
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#989898;}
+		::selection{background:#333636;color:#e53131;}
+		a{color:#e53131;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #e53131, #006673);
+			  background-image: -ms-linear-gradient(top, #e53131, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 #fe5b5a), from(#EEE), to(#006673);
+			  background-image: -webkit-linear-gradient(top, #e53131, #006673);
+			  background-image: -o-linear-gradient(top, #e53131, #006673);
+			  background-image: linear-gradient(to top, #e53131, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e53131', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #e53131 #e53131 #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#EEE;color:#333;}
+		#documenter_sidebar ul{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a:hover{color:#e53131;}
+		#documenter_sidebar ul a.open_menu,#documenter_sidebar ul a.mPS2id-highlight{color:#e53131;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+	<div class="container-fluid clearfix">
+		<div id="documenter_sidebar">
+			<a href="http://posthemes.com/" id="documenter_logo">
+				<img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="logo"/>
+			</a>
+			<ul id="documenter_nav">
+				<li><a href="#documenter_cover"><span class="icon fa fa-home"></span> Start</a></li>
+				<li><a href="#frontend" title="frontend"><span class="icon fa fa-check-square"></span> Frontend Appearance</a></li>
+				<li><a href="#config" title="Configure Pos search products by category"><span class="icon fa fa-cogs"></span> Configure Pos search products by category</a></li>
+				<li><a href="#support" title="support"><span class="icon fa fa-bell"></span> Posthemes Support</a></li>
+			</ul>
+			<div id="documenter_copyright">Copyright ©<a href="http://posthemes.com/">Posthemes</a>.<br>All rights reserved.
+			</div>
+		</div>
+		<div id="documenter_content">
+		<!-- Start -->
+		<section id="documenter_cover">
+		<h1>Pos search products by category</h1>
+		<hr>
+		<p><i>With this module, customers will be able to find exactly what they're looking for in seconds.</i></p>
+		<br>
+		<p>And here you can find out more about theme updates, new features and about our upcoming themes:</p>
+		<p>-	Follow us on <a href="https://www.facebook.com/posthemes"><b> Facebook </b></a></p>
+		<p>- 	Follow us on <a href="https://twitter.com/posthemes"><b> Twitter </b></a></p>
+		<p>-	Follow us on <a href="http://posthemes.com/"><b> Posthemes </b></a></p>
+		<br>
+		<p><i><b>PosThemes,</b></i></p>
+		</section>
+		<!-- End Start -->
+		
+		<!-- Frontend Appearance -->
+		<section id="frontend">
+		<div class="page-header"><h2>Frontend Appearance</h2></div>
+		<p> <img src="assets/images/frontend_search.jpg"  alt="frontend search" /> </p>
+		</section>
+		<!-- End Frontend Appearance -->
+		
+		<!-- Configure Pos search products by category -->
+		<section id="config">
+		<div class="page-header"><h2>Configure Pos search products by category</h2></div>
+		<p><i>This allows you to to config selected elements as general configuration for Pos search products by category.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Pos search products by category</strong>, click "<strong>Configure</strong>" button. </p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+				<p><img src="assets/images/config_search.jpg"  alt="config_search" /></p>
+				<p>We got:</p>
+				<ul>
+					<li><strong>Enable list categories</strong>: Enable to choose categories which will be shown on the category filter.</li>
+					<li><strong>Category depth level</strong>: The level depth for each category.</li>
+					<li><strong>Show product image in results</strong>: Enable to show product image.</li>
+					<li><strong>Number products in ajax result </strong>: The number of products to show in the search results list while searching by a keyword.</li>
+				</ul>
+			<p>=> Configure parameters as you want</p>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<!-- End Configure Pos search products by category -->
+		
+		<!-- Posthemes Support-->
+		<section id="support">
+		<div class="page-header"><h2>Posthemes Support</h2></div>
+		<p>Support Working time: Monday - Friday</p>
+		<p>Estimated ticket and answers review time: 1-3 business days.</p>
+		<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+		<p><i>Send us email to <a href="mailto:posthemes@gmail.com">posthemes@gmail.com</a>.</i></p>
+		</section>
+		</div>
+	</div>
+	<span id="back-top"><a href="javascript(0)"><span class="icon fa fa-arrow-up"></span></a></span>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Pos Static Footer module</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.ico.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		
+		$('#documenter_sidebar #documenter_nav li a').on('click', function(){
+			if($(this).hasClass('open_menu')) {
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );   
+				$(this).removeClass( 'open_menu' );  
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideUp();
+				$(this).parent().siblings().find('ul').slideUp();
+			}
+			else {	
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );  
+				$(this).parent().siblings().find('ul').slideUp();
+				$(this).addClass( 'open_menu' );   
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideDown();
+		
+			}
+			
+		});
+		(function(){
+			$(window).ready(function () {
+				
+				/ Page Scroll to id fn call /
+				$("#documenter_nav li a ").mPageScroll2id({
+					highlightSelector:"#documenter_nav li a ",
+					//offset:100,
+				});
+			});
+		})(jQuery); 
+	});
+	</script>
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#989898;}
+		::selection{background:#333636;color:#e53131;}
+		a{color:#e53131;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #e53131, #006673);
+			  background-image: -ms-linear-gradient(top, #e53131, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 #fe5b5a), from(#EEE), to(#006673);
+			  background-image: -webkit-linear-gradient(top, #e53131, #006673);
+			  background-image: -o-linear-gradient(top, #e53131, #006673);
+			  background-image: linear-gradient(to top, #e53131, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e53131', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #e53131 #e53131 #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#EEE;color:#333;}
+		#documenter_sidebar ul{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a:hover{color:#e53131;}
+		#documenter_sidebar ul a.open_menu,#documenter_sidebar ul a.mPS2id-highlight{color:#e53131;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+	<div class="container-fluid clearfix">
+		<div id="documenter_sidebar">
+			<a href="http://posthemes.com/" id="documenter_logo">
+				<img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="logo"/>
+			</a>
+			<ul id="documenter_nav">
+				<li><a href="#documenter_cover"><span class="icon fa fa-home"></span> Start</a></li>
+				<li><a href="#frontend" title="frontend"><span class="icon fa fa-check-square"></span> Frontend Appearance</a></li>
+				<li><a href="#new" title="new"><span class="icon fa fa-edit"></span> How to add new static footer</a></li>
+				<li><a href="#config" title="configure"><span class="icon fa fa-cogs"></span> Configure Pos Static Footer module</a></li>
+				<li><a href="#translate" title="translate"><span class="icon fa fa-language"></span> Translate module<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#translate_title'>Translate Title</a></li>
+						<li class='sub-1'><a href='#translate_link'>Translate List Link</a></li>
+					</ul>
+				</li>
+				<li><a href="#support" title="support"><span class="icon fa fa-bell"></span> Posthemes Support</a></li>
+			</ul>
+			<div id="documenter_copyright">Copyright ©<a href="http://posthemes.com/">Posthemes</a>.<br>All rights reserved.
+			</div>
+		</div>
+		<div id="documenter_content">
+		<!-- Start -->
+		<section id="documenter_cover">
+		<h1>Pos Static Footer module</h1>
+		<hr>
+		<p><i>Create text, images, banners, videos, tables or any other type of static footer.</i></p>
+		<br>
+		<p>And here you can find out more about theme updates, new features and about our upcoming themes:</p>
+		<p>-	Follow us on <a href="https://www.facebook.com/posthemes"><b> Facebook </b></a></p>
+		<p>- 	Follow us on <a href="https://twitter.com/posthemes"><b> Twitter </b></a></p>
+		<p>-	Follow us on <a href="http://posthemes.com/"><b> Posthemes </b></a></p>
+		<br>
+		<p><i><b>PosThemes,</b></i></p>
+		</section>
+		<!-- End Start -->
+		
+		<!-- Frontend Appearance -->
+		<section id="frontend">
+		<div class="page-header"><h2>Frontend Appearance</h2></div>
+		<p> <img src="assets/images/frontend_staticfooter.jpg"  alt="frontend staticfooter" /> </p>
+		</section>
+		<!-- End Frontend Appearance -->
+		
+		<!-- How to add new static block -->
+		<section id="new">
+		<div class="page-header"><h2>How to add new static block</h2></div>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+			<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+			<li>Choose “<strong>Installed modules</strong>” tab
+			<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+			<li>On <strong>Pos Static Footer</strong> module, click "<strong>Configure</strong>" button. 
+			<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+			<li>Click the <strong>New block</strong> button <img src="assets/images/add_new_block.jpg"  alt="add new menu" /> then add the info for the new static block.
+			<li class="img-in"> <img src="assets/images/add_new_footerblock.jpg"  alt="add_new_footerblock" />
+			<p>We got:</p>
+				<ul>
+					<li><strong>Name of the block</strong>: Add staticblock title</li>
+					<li><strong>Show title</strong>: Choose <i>Yes/No</i> to show title or not</li>
+					<li><strong>Width of this block</strong>: Configure column-width. The maximum of columns is 12 based on the bootstrap columns format.</li>
+					<li><strong>Hook</strong>: Select hook for this static block</li>
+					<li><strong>Select type content</strong>:
+						<p>- <strong>List Links</strong>: Select link or add external link as you need</p>
+						<p>- <strong>Custom Content</strong>: Custom static blocks or select module to display on homepage.</p>
+					</li>
+				</ul>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ul>
+		<p><i><strong><u>Note:</u></strong> Theme's hooks position in Front-office</i></p>
+		<p> <img src="assets/images/hooks.jpg"  alt="hooks" /></p>
+		</section>
+		<!-- End How to add new static block-->
+		
+		<!-- Configure Pos Static Footer module -->
+		<section id="config">
+		<div class="page-header"><h2>Configure Pos Static Footer module</h2></div>
+		<p><i>Configure static blocks in the Pos Static Footer module and add them to any place on the page.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			<li>
+				<p>On <strong>Pos Static Footer</strong> module, click "<strong>Configure</strong>" button.</p> 
+			 <p><img src="assets/images/config_module.jpg" alt="" /></p>
+			<li>
+				<p>Click <strong>Edit</strong> on selected static footer and then configure parameters as you want</p>
+				<p><img src="assets/images/config_staticfooter.jpg"  alt="config_staticfooter" /></p>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		<p><i><strong><u>Note:</u></strong> With drag and drop, you can rearrange the structure and elements at the footer</i></p>
+		<p> <img src="assets/images/position_staticfooter.jpg"  alt="drag drop staticfooter" /></p>
+		</section>
+		<!-- End Configure Pos Static Footer module -->
+		
+		<!-- Translate module -->
+		<section id="translate">
+		<div class="page-header"><h2>Translate module</h2></div>
+		<!-- Translate title -->
+		<section id="translate_title">
+		<div class="page-header"><h3>Translate Title</h3></div>
+			<ul>
+				<li>Login your Prestashop admin</li>
+				<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+				<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+				<li>Choose “<strong>Installed modules</strong>” tab
+				<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+				<li>On <strong>Pos Static Footer module</strong>, click "<strong>Configure</strong>" button. 
+				<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+				<li>Click <strong>Edit</strong> on selected static block and then click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+				<li class="img-in"><img src="assets/images/staticblocks_trans.jpg" alt="" />
+				<li>At <strong>Name of the block, HTML content</strong>, translate text of this staticblock.</li>
+				<li>Click <strong>Save</strong> button when you finish</li>
+			</ul>
+		</section>
+		<!-- End Translate title -->
+		
+		<!-- Translate PrestaShop Link -->
+		<section id="translate_link">
+		<div class="page-header"><h3>Translate List Link</h3></div>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Shop Parameters</strong> > <strong>Traffic & SEO</strong>
+			<li class="img-in"><img src="assets/images/parameters_seo.jpg" alt="" />
+			<li>Click on <strong>SEO & URLS</strong> tab</li>
+			<li>At <strong>SEO & URLs</strong> part, click <strong>Edit</strong> on selected page. </li>
+			<li class="img-in"><img src="assets/images/linklist_trans.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Page title </strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/linklist_trans2.jpg" alt="" />
+		</ul>
+		</section>
+		<!-- End Translate PrestaShop Link -->
+		</section>
+		<!-- Posthemes Support-->
+		<section id="support">
+		<div class="page-header"><h2>Posthemes Support</h2></div>
+		<p>Support Working time: Monday - Friday</p>
+		<p>Estimated ticket and answers review time: 1-3 business days.</p>
+		<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+		<p><i>Send us email to <a href="mailto:posthemes@gmail.com">posthemes@gmail.com</a>.</i></p>
+		</section>
+		</div>
+	</div>
+	<span id="back-top"><a href="javascript(0)"><span class="icon fa fa-arrow-up"></span></a></span>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Vertical Megamenu</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.ico.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		
+		$('#documenter_sidebar #documenter_nav li a').on('click', function(){
+			if($(this).hasClass('open_menu')) {
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );   
+				$(this).removeClass( 'open_menu' );  
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideUp();
+				$(this).parent().siblings().find('ul').slideUp();
+			}
+			else {	
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );  
+				$(this).parent().siblings().find('ul').slideUp();
+				$(this).addClass( 'open_menu' );   
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideDown();
+		
+			}
+			
+		});
+		(function(){
+			$(window).ready(function () {
+				
+				/ Page Scroll to id fn call /
+				$("#documenter_nav li a ").mPageScroll2id({
+					highlightSelector:"#documenter_nav li a ",
+					
+					//offset:100,
+				});
+			});
+		})(jQuery); 
+	});
+	</script>
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#989898;}
+		::selection{background:#333636;color:#e53131;}
+		a{color:#e53131;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #e53131, #006673);
+			  background-image: -ms-linear-gradient(top, #e53131, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 #fe5b5a), from(#EEE), to(#006673);
+			  background-image: -webkit-linear-gradient(top, #e53131, #006673);
+			  background-image: -o-linear-gradient(top, #e53131, #006673);
+			  background-image: linear-gradient(to top, #e53131, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e53131', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #e53131 #e53131 #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#EEE;color:#333;}
+		#documenter_sidebar ul{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a:hover{color:#e53131;}
+		#documenter_sidebar ul a.open_menu,#documenter_sidebar ul a.mPS2id-highlight{color:#e53131;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+	<div class="container-fluid clearfix">
+		<div id="documenter_sidebar">
+			<a href="http://posthemes.com/" id="documenter_logo">
+				<img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="logo"/>
+			</a>
+			<ul id="documenter_nav">
+				<li><a href="#documenter_cover"><span class="icon fa fa-home"></span> Start</a></li>
+				<li><a href="#frontend" title="frontend"><span class="icon fa fa-check-square"></span> Frontend Appearance</a></li>
+				<li><a href="#new" title="new menu item"><span class="icon fa fa-edit"></span> Create new menu item<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#general_setting'>General Setting</a></li>
+						<li class='sub-1'><a href='#new_menu_item'>How to build a simple menu item?</a></li>
+						<li class='sub-1'><a href='#new_submenu'>How to build columns in Sub-menus?</a></li>
+					</ul>
+				</li>
+				<li><a href="#config" title="Configure Megamenu"><span class="icon fa fa-cogs"></span> Configure Vertical Megamenu<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#general_config'>General Configuration</a></li>
+						<li class='sub-1'><a href='#config_menu_item'>Config menu item</a></li>
+						<li class='sub-1'><a href='#config_submenu'>Config Submenu</a></li>
+					</ul>
+				</li>
+				<li><a href="#translate" title="translate"><span class="icon fa fa-language"></span> Translate module<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#translate_title'>Translate Title</a></li>
+						<li class='sub-1'><a href='#translate_link'>Translate PrestaShop Link</a></li>
+					</ul>
+				</li>
+				<li><a href="#support" title="support"><span class="icon fa fa-bell"></span> Posthemes Support</a></li>
+			</ul>
+			<div id="documenter_copyright">Copyright ©<a href="http://posthemes.com/">Posthemes</a>.<br>All rights reserved.
+			</div>
+		</div>
+		<div id="documenter_content">
+		<!-- Start -->
+		<section id="documenter_cover">
+		<h1>Vertical Megamenu</h1>
+		<hr>
+		<p><i>Allow you show vertical category navigation with subcategories follow the columns are configured.</i></p>
+		<br>
+		<p>And here you can find out more about theme updates, new features and about our upcoming themes:</p>
+		<p>-	Follow us on <a href="https://www.facebook.com/posthemes"><b> Facebook </b></a></p>
+		<p>- 	Follow us on <a href="https://twitter.com/posthemes"><b> Twitter </b></a></p>
+		<p>-	Follow us on <a href="http://posthemes.com/"><b> Posthemes </b></a></p>
+		<br>
+		<p><i><b>PosThemes,</b></i></p>
+		</section>
+		<!-- End Start -->
+		
+		<!-- Frontend Appearance -->
+		<section id="frontend">
+		<div class="page-header"><h2>Frontend Appearance</h2></div>
+		<p> <img src="assets/images/frontend_vermenu.jpg"  alt="frontend_vermenu" /> </p>
+		</section>
+		<!-- End Frontend Appearance -->
+		
+		<!-- Create new menu item -->
+		<section id="new">
+		<div class="page-header"><h2>Create new menu item</h2></div>
+		<section id="general_setting">
+		<div class="page-header"><h3>General Setting</h3></div>
+		<p><i>This allows you to to set selected elements for the Vertical MegaMenu.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button.</p> 
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>In part <strong>MENU SETTINGS</strong></p>
+				<p><img src="assets/images/general_setting_ver.jpg"  alt="general setting" /></p>
+				<p>We got:</p>				
+				<ul>
+					<li><strong>Heading title</strong>: Add heading title</li>
+					<li><strong>Background type</strong>: Select background type
+						<p>- <strong>None</strong>: Don't use background type</p>
+						<p>- <strong>Color</strong><p>
+							<ul>
+							<li><strong>Background color</strong>: Set color for background</li>
+							</ul>
+						<p>- <strong>Image</strong></p>
+							<ul>
+							<li><strong>Image source</strong>: Upload image background from computer</li>
+							<li><strong>Background repeat</strong>: Background image can be repeated along the horizontal and vertical axes, or not repeated at all</li>
+							</ul>
+					</li>
+					<li><strong>Submenu animation</strong>: Select animations for dropown menu items</li>
+					<li><strong>Custom CSS</strong>: Add custom CSS for menu item</li>
+					<li><strong>Catalog number displayed</strong>: Specify the number of catalogs on vertical mega menu</li>
+				</ul>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<section id="new_menu_item">
+		<div class="page-header"><h3>How to build a simple menu item?</h3></div>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button. </p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Click the <strong>Add new item</strong> <img src="assets/images/add_new_menu.jpg"  alt="add new menu" /> then add the info for the menu item.</p>
+				<p><img src="assets/images/add_new_menu2.jpg"  alt="add new menu" /></p>
+				<p>We got:</p>
+				<ul>
+					<li><strong>Title</strong>: Add menu title (<i>>>> If use Prestashop link and want to use Prestashop title, leave it empty.</i>)</li>
+					<li><strong>Type Link</strong>: Select menu item type (<i>PrestaShop Link / Custom Link / None</i>)
+						<p>- <strong>PrestaShop Link</strong>: Select link from Category, CMS, Supplier, Manufacturer or Page.</p>
+						<p>- <strong>Custom Link</strong>: Enter internal or external link</p>
+					</li>
+					<li><strong>Sub Title</strong>: Enter sub title</li>
+					<li><strong>Use icon</strong>: Choose icon image
+						<p>- <strong>No</strong>: Don't use icon</p>
+						<p>- <strong>Font-Awesome Icon</strong>: Use font-awesome icon (<i>ex: <code><span>&lt;i class="</span>fab fa-angellist<span>"&gt;&lt;/i&gt;</span></code></i>)</p>
+						<p>- <strong>Image Icon</strong>: Click <strong>Select image ></strong> to upload icon from computer</p>
+					</li>
+					<li><strong>Main link style</strong>: Config CSS for menu item (<i>ex: color, color hover, background color...</i>)</li>
+					<li><strong>Subtitle style</strong>: Config CSS for sub title (<i>ex: color, background color, font size...</i>)</li>
+					<li><strong>Submenu type</strong>: There are 3 types of submenus: Mega, Flyout and None (<i>Flyout only is available when you select category in Type Link</i>)</li>
+					<li><strong>Add specific class</strong>: Class to style the menu item</li>
+					<li><strong>New window</strong>: Choose <strong>Yes/No</strong> to open new window/tab or not by clicking</li>
+					<li><strong>Active</strong>: Choose <strong>Yes</strong> pulish the menu item</li>
+				</ul>
+			</li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<section id="new_submenu">
+		<div class="page-header"><h3>How to build columns in Sub-menus?</h3></div>
+		<p><i>In here, you can set the width of the sub-megamenu, add column, and add class that style for it. To use this setting, select the menu item as <strong>Mega</strong> type in <strong>Submenu type</strong> field.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button. </p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Click the <strong>Build SubMenu</strong> <img src="assets/images/build_sub.jpg"  alt="build submenu" /> then add the info for the menu item.</p>
+				<p><img src="assets/images/build_sub2.jpg"  alt="build submenu" /></p>
+				<p><img src="assets/images/build_sub3_ver.jpg"  alt="build submenu" /></p>
+			</li>
+			<li>
+				<p>Click on <strong>Add a row</strong> and then click <strong>Save</strong> to create new row</p>
+				<p><img src="assets/images/build_sub4.jpg"  alt="build submenu" /></p>
+			</li>
+			<li>
+				<p>Click on <strong>Add Column</strong> to add column for this row</p>
+				<p><img src="assets/images/build_sub5_ver.jpg"  alt="build submenu" /></p>
+				<p>We got:</p>
+				<ul>
+					<li><strong>Width</strong>: Configure column-width. The maximum of columns is 12 based on the bootstrap columns format.</li>
+					<li><strong>Column title</strong>: Enter title of column (<i>>>> If use Prestashop link and want to use Prestashop title, leave it empty.</i>)</li>
+					<li><strong>Type Link</strong>: Select type for column title(<i>PrestaShop Link / Custom Link / None</i>)
+						<p>- <strong>PrestaShop Link</strong>: Select link from Category, CMS, Supplier, Manufacturer or Page.</p>
+						<p>- <strong>Custom Link</strong>: Enter internal or external link</p>
+					</li>
+					<li><strong>Specific class</strong>: Class to style the column title</li>
+					<li><strong>Active in mobile</strong>: Choose <strong>Yes</strong> pulish in the mobile</li>
+				</ul>
+			</li>
+			<li>
+				<p>Click <strong>Save</strong> button when you finish</p>
+				<p><img src="assets/images/build_sub6.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>After that, you need configure submenu item</p>
+				<p><img src="assets/images/build_sub7_ver.jpg" alt="" /></p>
+				<p>We got:</p>
+				<ul>
+					<li><strong>Type item</strong>: Select submenu item type (<i>Category tree, Prestashop Link, Custom Link, Product, Banner image, HTML block, Manufacturer logo</i>)
+						<p>- <strong>Category tree</strong></p>
+						<ul>
+							<li><strong>Select a category</strong>: Select category</li>
+						</ul>
+						<p>- <strong>Prestashop Link</strong></p>
+						<ul>
+							<li><strong>Prestashop link</strong>: Select link from Category, CMS, Supplier, Manufacturer or Page.</li>
+						</ul>
+						<p>- <strong>Custom Link</strong></p>
+						<ul>
+							<li><strong>Title</strong>: Enter custom block title</li>
+							<li><strong>URL</strong>: Enter internal or external link</li>
+						</ul>
+						<p>- <strong>Product</strong></p>
+						<ul>
+							<li><strong>Product</strong>: Choose product</li>
+						</ul>
+						<p>- <strong>Banner image</strong></p>
+						<ul>
+							<li>+ <strong>Image source</strong>: Upload banner image from computer</li>
+							<li>+ <strong>Image link</strong>: Enter internal or external link for banner image</li>
+						</ul>
+						<p>- <strong>HTML block</strong></p>
+						<ul>
+							<li><strong>HTML content</strong>: Enter the HTML to define the column</li>
+						</ul>
+						<p>- <strong>Manufacturer logo</strong>
+						</p>
+						<ul>
+							<li><strong>Select manufacturer</strong>: Select manufacturer logo from list</li>
+						</ul>
+					</li>
+					<li><strong>Active in mobile</strong>: Choose <strong>Yes</strong> pulish in the mobile</li>
+				</ul>
+			</li>
+		</ol>
+		</section></section>
+		<!-- End Create new menu item -->
+		
+		<!-- Configure Megamenu -->
+		<section id="config">
+		<div class="page-header"><h2>Configure Vertical Megamenu</h2></div>
+		<section id="general_config">
+		<div class="page-header"><h3>General Configuration</h3></div>
+		<p><i>This allows you to to config selected elements as general configuration for the Vertical MegaMenu.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button. </p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>In part <strong>MENU SETTINGS</strong></p>
+				<p><img src="assets/images/general_setting_ver.jpg"  alt="general setting" /></p>
+			<p>=> Configure parameters as you want</p></li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		</section>
+		<section id="config_menu_item">
+		<div class="page-header"><h3>Config menu item</h3></div>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button.</p> 
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>In part <strong>MENU LIST</strong>, click <strong>Edit</strong> on selected menu item</p>
+				<p><img src="assets/images/edit_menu.jpg"  alt="edit menu" /></p>
+				<p><img src="assets/images/edit_menu2.jpg"  alt="edit menu" /></p>
+			<p>=> Configure parameters as you want</p></li>
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ol>
+		<p><i><strong><u>Note:</u></strong> In part <strong>Menu List</strong>, using drag / drop function to move menu item into another position.</i></p>
+		<p> <img src="assets/images/position_menu.jpg"  alt="drag drop menu item" /></p>
+		</section>
+		<section id="config_submenu">
+		<div class="page-header"><h3>Config Submenu</h3></div>
+		<p><i>Configure the width of the sub-megamenu, change title, link and add class that style for submenu.</i></p>
+		<ol>
+			<li>Login your Prestashop admin</li>
+			<li>
+				<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+				<p><img src="assets/images/modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose “<strong>Installed modules</strong>” tab</p>
+				<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button. </p>
+				<p><img src="assets/images/config_module.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Click the <strong>Build SubMenu</strong> <img src="assets/images/build_sub.jpg"  alt="build submenu" /></p>
+				<p><img src="assets/images/build_sub2.jpg"  alt="build submenu" /></p>
+				<p><img src="assets/images/config_sub_ver.jpg"  alt="build submenu" /></p>
+			<p>=> Configure parameters as you want (<i>edit, add new or delete row, column; add new submenu item</i>)</p></li>
+		</ol>
+		<p><i><strong><u>Note:</u></strong> In this part, using drag / drop function to move row in a single column, or the columns with each other.</i></p>
+		<p> <img src="assets/images/position_subvermenu.jpg"  alt="drag drop submenu item" /></p>
+		<p> <img src="assets/images/position_subvermenu2.jpg"  alt="drag drop submenu item" /></p>
+		</section></section>
+		<!-- End Configure Megamenu -->
+		
+		<!-- Translate module -->
+		<section id="translate">
+		<div class="page-header"><h2>Translate module</h2></div>
+		<!-- Translate title -->
+		<section id="translate_title">
+		<div class="page-header"><h3>Translate Title</h3></div>
+			<ul>
+				<li>Login your Prestashop admin</li>
+				<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+				<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+				<li>Choose “<strong>Installed modules</strong>” tab
+				<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+				<li>On <strong>Vertical Megamenu</strong> module, click "<strong>Configure</strong>" button. 
+				<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+				<li>In part <strong>MENU LIST</strong>, click <strong>Edit</strong> on selected menu item
+				<li class="img-in"><img src="assets/images/megamenu_trans.jpg" alt="" />
+				<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+				<li class="img-in"><img src="assets/images/megamenu_trans2.jpg" alt="" />
+				<li>At <strong>Title</strong>, translate the menu item.</li>
+				<li>Click <strong>Save</strong> button when you finish</li>
+			</ul>
+		</section>
+		<!-- End Translate title -->
+		
+		<!-- Translate PrestaShop Link -->
+		<section id="translate_link">
+		<div class="page-header"><h3>Translate PrestaShop Link</h3></div>
+		<h4>1. Category Catalog</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Catalog</strong> > <strong>Catagories</strong>
+			<li class="img-in"><img src="assets/images/catalog_categories.jpg" alt="" />
+			<li>On selected catagory, click "<strong>Edit</strong>" button. 
+			<li class="img-in"><img src="assets/images/category_config.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Name</strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/category_config2.jpg" alt="" />
+		</ul>
+		<h4>2. Product Catalog</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Catalog</strong> > <strong>Products</strong>
+			<li class="img-in"><img src="assets/images/catalog_products.jpg" alt="" />
+			<li>On selected catagory, click "<strong>Edit</strong>" button. 
+			<li class="img-in"><img src="assets/images/product_config.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Name</strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/product_config2.jpg" alt="" />
+		</ul>
+		<h4>3. Cms</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Design</strong> > <strong>Pages</strong>
+			<li class="img-in"><img src="assets/images/design_page.jpg" alt="" />
+			<li>On selected page, click "<strong>Edit</strong>" button. 
+			<li class="img-in"><img src="assets/images/page_config.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Title</strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/page_config2.jpg" alt="" />
+		</ul>
+		<h4>4. Manufacturer/Supplier</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Catalog</strong> > <strong>Brands & Supplier</strong>
+			<li class="img-in"><img src="assets/images/catalog_brands.jpg" alt="" />
+			<li>Click on <strong>BRANDS</strong>/<strong>SUPPLIER</strong> tab</li> 
+			<li>On selected Manufacturer/Supplier, click "<strong>Edit</strong>" button. 
+			<li class="img-in"><img src="assets/images/brand_config.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Title</strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+		</ul>
+		<h4>5. Page</h4>
+		<ul>
+			<li>Login your Prestashop admin</li>
+			<li>Go to <strong>Shop Parameters</strong> > <strong>Traffic & SEO</strong>
+			<li class="img-in"><img src="assets/images/parameters_seo.jpg" alt="" />
+			<li>Click on <strong>SEO & URLS</strong> tab</li>
+			<li>At <strong>SEO & URLs</strong> part, click <strong>Edit</strong> on selected page. </li>
+			<li class="img-in"><img src="assets/images/linklist_trans.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+			<li>At <strong>Page title </strong>, enter your language & click <strong>Save</strong> button when you finish</li>
+			<li class="img-in"><img src="assets/images/linklist_trans2.jpg" alt="" />
+		</ul>
+		</section>
+		<!-- End Translate PrestaShop Link -->
+		</section>
+		<!-- Posthemes Support-->
+		<section id="support">
+		<div class="page-header"><h2>Posthemes Support</h2></div>
+		<p>Support Working time: Monday - Friday</p>
+		<p>Estimated ticket and answers review time: 1-3 business days.</p>
+		<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+		<p><i>Send us email to <a href="mailto:posthemes@gmail.com">posthemes@gmail.com</a>.</i></p>
+		</section>
+		</div>
+	</div>
+	<span id="back-top"><a href="javascript(0)"><span class="icon fa fa-arrow-up"></span></a></span>
+</body>
+</html>

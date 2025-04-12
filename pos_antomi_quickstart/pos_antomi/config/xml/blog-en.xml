@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/en/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/en/blog/feed.xml</link>
+    <description></description>
+    <language>en</language>
+     <atom:link href="https://www.prestashop.com/en/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>5 Tips to Reduce Checkout Friction</title>
+    <link>https://www.prestashop.com/en/blog/5-tips-to-reduce-checkout-friction</link>
+    <description>You’ve put in the legwork: developed an optimal storefront, perfected the product, established a price that fits into market demand and set up online payment.</description>
+     <pubDate>Mon, 16 Sep 2019 11:47:46 +0200</pubDate>
+ <dc:creator>bluesnap</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/5-tips-to-reduce-checkout-friction</guid>
+  </item>
+  <item>
+    <title>E-commerce: a back-to-school special?</title>
+    <link>https://www.prestashop.com/en/blog/back-to-school-special</link>
+    <description>The back-to-school season is now the second biggest e-commerce event with an increase of more than 20% in the number of searches on Google.</description>
+     <pubDate>Mon, 09 Sep 2019 17:44:23 +0200</pubDate>
+ <dc:creator>MLNielsen</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/back-to-school-special</guid>
+  </item>
+  <item>
+    <title>5 content tips to increase conversion rate</title>
+    <link>https://www.prestashop.com/en/blog/content-tips-to-increase-conversion-rate</link>
+    <description>Optimize your product content easily to increase your conversion rate using these easy steps</description>
+     <pubDate>Mon, 02 Sep 2019 12:05:40 +0200</pubDate>
+ <dc:creator>iPresta</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/content-tips-to-increase-conversion-rate</guid>
+  </item>
+  <item>
+    <title>5 Ways to Improve Customer Experience and Retain Customers</title>
+    <link>https://www.prestashop.com/en/blog/improve-customer-experience-retain-customers</link>
+    <description>In the world of ecommerce, everything accelerates quickly and nothing stays the same for very long.</description>
+     <pubDate>Fri, 30 Aug 2019 12:11:01 +0200</pubDate>
+ <dc:creator>shipstation</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/improve-customer-experience-retain-customers</guid>
+  </item>
+  <item>
+    <title>4 Tips for Better Creative Content on Facebook Ads</title>
+    <link>https://www.prestashop.com/en/blog/better-creative-content-on-facebook-ads</link>
+    <description>Facebook has more than 2.41 billion monthly active users who create, share and like different content each and every day. It’s one of the most used marketing tools for eCommerce industry.</description>
+     <pubDate>Fri, 23 Aug 2019 10:13:55 +0200</pubDate>
+ <dc:creator>Invertus</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/better-creative-content-on-facebook-ads</guid>
+  </item>
+  <item>
+    <title>Six tips for successful migration to PrestaShop 1.7</title>
+    <link>https://www.prestashop.com/en/blog/prestashop-1.7-migration-tips</link>
+    <description>Migrating your e-commerce shop is an important step – but can sometimes be a tricky process. </description>
+     <pubDate>Wed, 21 Aug 2019 10:59:48 +0200</pubDate>
+ <dc:creator>Méguy Solvet</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/prestashop-1.7-migration-tips</guid>
+  </item>
+  <item>
+    <title>How to Set the Retail Price of a Product</title>
+    <link>https://www.prestashop.com/en/blog/set-retail-price-of-a-product</link>
+    <description>Do you know that setting the price of a product goes a long way in making your product a success? Most especially if you’re an eCommerce business owner.</description>
+     <pubDate>Mon, 19 Aug 2019 11:44:30 +0200</pubDate>
+ <dc:creator>WebDesk</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/set-retail-price-of-a-product</guid>
+  </item>
+  <item>
+    <title>4 Reasons Your Business is Being Flagged as High-Risk</title>
+    <link>https://www.prestashop.com/en/blog/business-flagged-as-high-risk</link>
+    <description>When starting your business, the last thing you want to worry about are complications with your credit card processing.</description>
+     <pubDate>Fri, 16 Aug 2019 15:07:43 +0200</pubDate>
+ <dc:creator>PaymentCloud</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/business-flagged-as-high-risk</guid>
+  </item>
+  <item>
+    <title>PSD 2: next deadline on September 14, 2019</title>
+    <link>https://www.prestashop.com/en/blog/european-payment-services-directive</link>
+    <description>This fall, new strong authentication rules will come into force.</description>
+     <pubDate>Mon, 05 Aug 2019 14:36:25 +0200</pubDate>
+ <dc:creator>Camille Silhol</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/european-payment-services-directive</guid>
+  </item>
+  <item>
+    <title>Digital Marketing: SEO vs SEM - What is the Right Strategy for You?</title>
+    <link>https://www.prestashop.com/en/blog/right-seo-sem-strategy</link>
+    <description>Do you have an online presence? For example, an online store?</description>
+     <pubDate>Fri, 02 Aug 2019 11:55:01 +0200</pubDate>
+ <dc:creator>Cobiro</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/en/blog/right-seo-sem-strategy</guid>
+  </item>
+  </channel>
+</rss>

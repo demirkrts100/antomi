@@ -1,0 +1,6 @@
+Antomi__1.0.3 update guide:
+- Before update, please backup your site
+- Open: updated_v_1.0.3_for_1.8.x\modules : Upload all files override to : your_webserver\modules
+- Backend admin/ module / Module Manager/ reset module blockwishlist, productcomments : https://prnt.sc/t63BQZOn0ymL
+                                
+

@@ -1,0 +1,8 @@
+Antomi_1.0.3 install guide:
+- Backend admin / Design / Theme & Logo /   Add new theme : https://prnt.sc/4uebO0QQcZnL
+- Backend admin/ module / Module Manager/ reset module blockwishlist, productcomments : https://prnt.sc/t63BQZOn0ymL
+                                
+
+
+                                
+

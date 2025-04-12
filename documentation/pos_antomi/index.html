@@ -1,0 +1,839 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Pos Antomi</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/favicon.ico.png" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/backtotop.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		
+		
+		$('#documenter_sidebar #documenter_nav li a').on('click', function(){
+			if($(this).hasClass('open_menu')) {
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );   
+				$(this).removeClass( 'open_menu' );  
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideUp();
+				$(this).parent().siblings().find('ul').slideUp();
+			}
+			else {	
+				$(this).parent().siblings().find('a').removeClass( 'open_menu' );  
+				$(this).parent().siblings().find('ul').slideUp();
+				$(this).addClass( 'open_menu' );   
+				$(this).next('#documenter_sidebar #documenter_nav ul').slideDown();
+		
+			}
+			
+		});
+		(function(){
+			$(window).ready(function () {
+				
+				/ Page Scroll to id fn call /
+				$("#documenter_nav li a ").mPageScroll2id({
+					highlightSelector:"#documenter_nav li a ",
+					//offset:100,
+				});
+			});
+		})(jQuery); 
+	});
+	</script>
+	<style>
+		html{background-color:#EEEEEE;color:#383838;}
+		::-moz-selection{background:#333636;color:#989898;}
+		::selection{background:#333636;color:#c40316;}
+		a{color:#c40316;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #c40316, #006673);
+			  background-image: -ms-linear-gradient(top, #c40316, #006673);
+			  background-image: -webkit-gradient(linear, 0 0, 0 #fe5b5a), from(#EEE), to(#006673);
+			  background-image: -webkit-linear-gradient(top, #c40316, #006673);
+			  background-image: -o-linear-gradient(top, #c40316, #006673);
+			  background-image: linear-gradient(to top, #c40316, #006673);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c40316', endColorstr='#006673', GradientType=0);
+			  border-color: #006673 #006673 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #c40316 #c40316 #bfbfbf;
+		  background-color: #006673;
+		}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#EEE;color:#333;}
+		#documenter_sidebar ul{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a{border-top:1px solid #CFCFCF;}
+		#documenter_sidebar ul a:hover{color:#c40316;}
+		#documenter_sidebar ul a.open_menu,#documenter_sidebar ul a.mPS2id-highlight{color:#c40316;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+	<div class="container-fluid clearfix">
+		<div id="documenter_sidebar">
+			<a href="http://posthemes.com/" id="documenter_logo">
+				<img class="img-responsive" style="margin: 0 auto;" src="assets/images/logo.png" alt="logo"/>
+			</a>
+			<ul id="documenter_nav">
+				<li><a href="#documenter_cover">Start</a></li>
+				<li><a href="#installation" title="Installation">Installation Guide<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#install_demo'>Install Demo</a></li>
+						<li class='sub-1'><a href='#install_theme'>Install Theme</a></li>
+					</ul>
+				</li>
+				<li><a href="#features" title=" Features"> PrestaShop’s Features</a></li>
+				<li><a href="#layout" title="Layout">Modules names and Static Blocks on front-end<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#home1'>Layout1</a></li>
+						<li class='sub-1'><a href='#home2'>Layout2</a></li>
+						<li class='sub-1'><a href='#home3'>Layout3</a></li>
+						<li class='sub-1'><a href='#home4'>Layout4</a></li>
+					</ul>
+				</li>
+				<li><a href="#upload_logo" title="Logo">Upload your store logo and icon</a></li>
+				<li><a href="#information" title="information">How to edit contact information on header</a></li>
+				<li><a href="#related" title="related">How to display related products on product detail page</a></li>
+				<li><a href="#module" title="Module">Module Config<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#config'>General Configuration</a></li>
+						<li class='sub-1'><a href='#module_config'>Posthemes Module Configuration</a></li>
+						<li class='sub-1'><a href='#other'>Other modules</a></li>
+					</ul>
+				</li>
+				<li><a href="#translate" title="Translate">Translate Antomi theme<b class="caret"></b></a>
+					<ul class='menu-1'>
+						<li class='sub-1'><a href='#theme'>Back office translations</a></li>
+						<li class='sub-1'><a href='#theme_trans'>Themes translations</a></li>
+						<li class='sub-1'><a href='#module_content'>Translate module content</a></li>
+					</ul>
+				</li>
+				<li><a href="#support" title="Module">Posthemes Support</a></li>
+			</ul>
+			<div id="documenter_copyright">Copyright ©<a href="http://posthemes.com/">Posthemes</a>.<br>All rights reserved.
+			</div>
+		</div>
+		<div id="documenter_content">
+		<!-- Start -->
+		<section id="documenter_cover">
+		<h1>Pos Antomi Responsive Prestashop Theme 1.7</h1>
+		<hr>
+		<p><i>Pos Antomi is a <a href="http://posthemes.com/"><b> premium Responsive Prestashop theme</b></a> with advanced admin modules, extremely customizable and fully responsive. It is suitable for every type of store. It is a standalone design package so you can easily create your own sub-themes.</i></p>
+		<br>
+		<p>And here you can find out more about theme updates, new features and about our upcoming themes:</p>
+		<p>-	Follow us on <a href="https://www.facebook.com/posthemes"><b> Facebook </b></a></p>
+		<p>- 	Follow us on <a href="https://twitter.com/posthemes"><b> Twitter </b></a></p>
+		<p>-	Follow us on <a href="http://posthemes.com/"><b> Posthemes </b></a></p>
+		<br>
+		<p><i><b>PosThemes,</b></i></p>
+		</section>
+		<!-- End Start -->
+		
+		<!-- Installation --> 
+		<section id="installation">
+		<div class="page-header"><h2>Installation</h2></div>
+			<ul>
+				<li><p>Before you get started, make sure you have all the requirements available: Server space at a Hosting Provider, Domain Name, FTP client, Text Editor.<p>
+					<ul>
+						<li><strong>System</strong>: Unix, Linux or Windows. Unix is highly recommended.</li>
+						<li><strong>Web server</strong>:  Apache Web server 2.0 or later.</li>
+						<li><strong>PHP</strong> 5.4 or later.</li>
+						<li><strong>MySQL</strong> 5.0 or later.</li>
+						<li>At least <strong>128 Mb</strong> of RAM on your server.</li>
+					</ul>
+				</li>
+				<li><p>To install this theme you must have a working version of Prestashop already installed. For information in regard to installing the Prestashop platform, please see the Prestashop Wiki : <a rel="nofollow" href="http://doc.prestashop.com/display/PS17/Getting+started">http://doc.prestashop.com/display/PS17/Getting+started</a></p></li>
+				<li><p>After Prestashop is installed, you must delete “<b>install</b>” folder in your Prestashop.</p></li>
+			</ul>
+		</section>
+		
+			<!-- Install -->
+		<section id="install">
+		<div class="page-header"><h3>Install</h3></div>
+				<p>For each package, you will have: demo package, theme package, PSD. There are two ways to install a <strong>Prestashop Theme</strong>: </p>
+			<ul> 
+				<li> <p> <strong>Install Demo Package</strong>: By using the demo package, you will set the theme exactly as our Demo with sample data.  </p></li> 
+				<li> <p> <strong>Install Theme </strong>: If you have available shop, you can install only theme.</p></li> 
+			</ul>	
+		<br>
+		<h4><u><strong>Enabling Static Block and Static Footer with other language</strong></u></h4>
+		<p>In your theme, if there are 3 languages or more,  please enabling static block by below guide:</p>
+		<ul>
+			<li>Login your prestashop admin</li>
+			<li>Go to <strong>International </strong> > <strong>Localization </strong>.</li>
+			<li class="img-in"><img src="assets/images/translate.jpg" alt="" />
+			<li>Choose tab <strong>Languages</strong>.</li>
+			<li class="img-in"><img src="assets/images/translate1.jpg" alt="" />
+			<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+			<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+			<li>Choose “<strong>Installed modules</strong>” tab
+			<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+			<li>On <strong>Pos Staticblock </strong> or <strong>Pos Static Footer </strong> module, click "<strong>Configure</strong>" button. </li>
+			<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+			<li>Click "<strong>Edit</strong>" button of your selected block</li>
+			<li>Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" /> to show code HTML of this block in <strong>English</strong>. Then copy source code.</li>
+			<li class="img-in"><img src="assets/images/translate2.jpg" alt="" />
+			<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate. Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" />
+			<li class="img-in"><img src="assets/images/translate3.jpg" alt="" />
+			<li>Click <strong>Save</strong> button when you finish</li>
+		</ul>
+		</section>
+			<!-- End Install theme --> 
+		
+			<!-- Install demo -->
+		<section id="install_demo">
+		<div class="page-header"><h3>Install Demo</h3></div> 
+			<p>You install new website with database sample. After you install your website like our demo.</p>
+			<p>Each theme we update has its demo, here, we guide demo installation in general.</p>
+			<ol>
+				<li><p> Create new database:</p>
+					<ul> 
+						<li><p> Open your Browser and type : <strong>localhost/phpmyadmin</strong> or <strong>yourdomain/phpmyadmin</strong></p>
+						</li>
+						<li> 
+							<p> Then create database</p>
+							<p> <img src="assets/images/create_database.jpg"  alt="create database" /> </p>
+						</li>
+						<li> 
+							<p> Click database you have just created </p> 
+							<p> <img src="assets/images/import_database.jpg"  alt="import database" /> </p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>After import database, click that database and edit table <strong>ps_shop_url</strong> </p>
+					<p> <img src="assets/images/edit_database.jpg"  alt="edit database" /> </p>
+				</li>
+				<li>
+					<p>Change <strong>domain, domain_ssl, physical_uri</strong> based on your data.</p>
+					<p> <img src="assets/images/edit_database2.jpg"  alt="edit database" /> </p>
+				</li>
+				<li>
+					<p>Connect to file config <strong>\app\config\parameters.php</strong>, change <strong>database_host, database_name, database_user, database_password</strong>:</p>
+					<p> <img src="assets/images/change_config.jpg"  alt="change file config" /> </p>
+				</li>
+				<li>
+					<p>Generate file <strong>.htaccess</strong></p>
+					<ul> 
+						<li>
+							<p>Login your prestashop admin <strong>http://[<i>Pretashop host or IP</i>]/[<i>path to Prestashop</i>]/admin604op4z8n</strong></p>
+							<p>- Username: <strong>demo@posthemes.com</strong></p>
+							<p>- Pass: <strong>admin123</strong></p>
+						</li>
+						<li>
+							<p>Go to <strong>Shop Parameters</strong> > <strong>Traffic & SEO</strong>, at tab <strong>SEO & URLs</strong>, set up URLS and click "<strong>Save</strong>"</p>
+							<p> <img src="assets/images/generate.jpg"  alt="generate file" /> </p>
+						</li>
+						<li> 
+							<p><strong>Note:</strong></p> 
+							<p>- If you use localhost you shoud generate file .htaccess</p>
+							<p>- If you use normal hosting, you have to set permission 666 before you generate file .htaccess</p>
+						</li>
+					</ul>
+				</li>
+				<li>Finish installer.</li>
+			</ol>
+		</section>
+			<!-- End Install demo -->
+		
+			<!-- Install theme -->
+		<section id="install_theme">
+		<div class="page-header"><h3>Install Theme</h3></div>
+				<p>You must install default prestashop before. You can see instruction install default prestashop on Prestashop Wiki: <a href="http://doc.prestashop.com/display/PS17/Installing+PrestaShop">http://doc.prestashop.com/display/PS17/Installing+PrestaShop</a></p>
+				<ul>
+					<li>To install this theme automatically do the following the <a href="https://youtu.be/LuI-ynLYlGY"><b>video</b></a>:</li>
+					<li class="img-in"><embed allowscriptaccess="never" src="http://www.youtube.com/v/LuI-ynLYlGY" type="application/x-shockwave-flash" height="480" width="853"></li>
+					<li>Config show left or right column in each page
+						<p>1. Go to <strong>Advanced Parametters</strong> > <strong>Performance</strong></p>
+						<li class="img-in"><img src="assets/images/advanced_parameters.jpg" alt="" />
+						<p>2. Click "<strong>Clear cache</strong>"</p>
+						<li class="img-in"><img src="assets/images/clear_cache.jpg" alt="" />
+						<p>3. Go to <strong>Design</strong> > <strong>Theme & Logo</strong></p>
+						<li class="img-in"><img src="assets/images/design_theme.jpg" alt="" />
+						<p>4. Choose <strong>Choose layouts</strong></p>
+							<ul>
+								<li><i>Config Pos Antomi 1 Layout</i></li>
+								<li class="img-in"><img src="assets/images/config1.jpg" alt="" />
+								<li><i>Config Pos Antomi 2 Layout</i></li>
+								<li class="img-in"><img src="assets/images/config2.jpg" alt="" />
+								<li><i>Config Pos Antomi 3 Layout</i></li>
+								<li class="img-in"><img src="assets/images/config3.jpg" alt="" />
+								<li><i>Config Pos Antomi 4 Layout</i></li>
+								<li class="img-in"><img src="assets/images/config4.jpg" alt="" />
+							</ul>
+					</li>
+					<li>Finish installer.</li>
+				</ul>
+			<br>
+			<h4><u><strong>How to add new language</strong></u></h4>
+			<p>When working with different languages in PrestaShop, you should add new language by <a rel="nofollow" href="http://doc.prestashop.com/display/PS17/Languages"><b>this guide</b></a></p>
+			<br>
+			<h4><u><strong>Create or edit size image and Regenerate thumbnails</strong></u></h4>
+			<ol>
+				<li>
+					<p>Go to <strong>Design</strong> > <strong>Images Settings</strong></p>
+					<p><img src="assets/images/design_images.jpg" alt="" /></p>
+				</li>
+				<li>	
+					<p>Create or edit size image</p>
+					<p><img src="assets/images/edit_images.jpg" alt="" /></p>
+				</li>
+				<li>
+					<p>Choose <strong>Regenerate thumbnails</strong> button</p>
+					<p><img src="assets/images/regenerate1.jpg" alt="" />
+					<p><img src="assets/images/regenerate2.jpg" alt="" /></p>
+				</li>
+				<li>
+					<p>After that, we got:</p>
+					<p><img src="assets/images/regenerate3.jpg" alt="" /></p>
+				</li>
+			</ol>
+			<br>
+		</section>
+			<!-- End Install theme -->
+		<!-- End Installation -->
+		
+		
+		<!--  PrestaShop’s features -->
+		<section id="features">
+		<div class="page-header"><h2>PrestaShop’s Features</h2></div>
+			<p>User will also be able to efficiently manage your PrestaShop site without related the programming skill. You work in the front-office interface directly (in the <strong>Administration Area</strong>), which can be helpful to everyone, special for shop owners. To find more informations, please read on <i><a rel="nofollow" href="http://doc.prestashop.com/display/PS17/User+Guide">http://doc.prestashop.com/display/PS17/User+Guide</a></i></p>
+			<p><strong>Note</strong>: When you finish install theme, you should disable cache. This step will help your Prestashop site active normally.</p>
+			<ul>
+				<li><strong>Advanced Parameters</strong> > <strong>Performance</strong></li>
+				<li>At field <strong>Cache</strong>, choose <strong>No</strong></li>
+				<li class="img-in"><img src="assets/images/disable_cache.jpg" alt="" />
+				<li>Click <strong>Save</strong> button</li>
+			</ul>
+		</section>
+		<!-- End  PrestaShop’s features -->
+		<!-- Layout -->
+		<section id="layout">
+		<div class="page-header"><h2>Modules names and Static Blocks on front-end</h2></div>
+		</section>
+		<p><strong><u>Note</u></strong><p>
+		<ul>
+			<li> <span class=name-block><strong>BLACK</strong></span> texts: name of blocks.</li>
+			<li> <span class=name-modules><strong>RED</strong></span> texts: name of modules.</li>
+		</ul>
+		<section id="home1"><h3>#Layout1</h3></section>
+		<h4>List of Modules</h4>
+		<ul>
+			<li><a href='../modules_list/megamenu.html' target="_blank">Megamenu custommer</a></li>
+			<li><a href='../modules_list/slideshow.html' target="_blank">Pos Slideshow Slider</a></li>
+			<li><a href='../modules_list/listcategories.html' target="_blank">Pos list categories</a></li>
+			<li><a href='../modules_list/specialproducts.html' target="_blank">Pos Special Products module</a></li>
+			<li><a href='../modules_list/countdown.html' target="_blank">Pos Countdown time price</a></li>
+			<li><a href='../modules_list/newproducts.html' target="_blank">Pos New Products module</a></li>
+			<li><a href='../modules_list/featuredproducts.html' target="_blank">Pos Featured Products module</a></li>
+			<li><a href='../modules_list/suggestedproducts.html' target="_blank">Suggested Category Products</a></li>
+			<li><a href='../modules_list/categorytab.html' target="_blank"> Category Tab Slider</a></li>
+			<li><a href='../modules_list/newsletterpopup.html' target="_blank">Pos newsletter popup</a></li>
+			<li><a href='../modules_list/themeoptions.html' target="_blank">Pos Themeoptions</a></li>
+			<li><a href='../modules_list/search.html' target="_blank">Pos search products by category</a></li>
+			<li><a href='../modules_list/rotator.html' target="_blank">Rotator img</a></li>	
+			<li><a href='../modules_list/vermenu.html' target="_blank">Vertical Megamenu </a></li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticblocks.html' target="_blank">Pos Static Blocks</a></h4>
+		<ul>
+			<li>Static Cms</li>
+			<li>Home Banner</li>
+			<li>Home Banner2</li>
+			<li>static nav</li>
+			<li>Links Sale</li>
+			<li>Banner Top</li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticfooter.html' target="_blank">Pos Static Footer</a></h4>
+		<ul>
+			<li>Get the app</li>
+			<li>Infomation <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>Custom Links <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>My Account <i>(included <a href='#other'>My Account block</a>)</i></li>
+			<li>Contact Info <i>(included <a href='#other'>Social media follow links</a>)</i></li>
+			<li>Links Footer</li>
+			<li>Copyright Block</li>
+			<li>Payment Block</li>
+		</ul>
+		<p><strong>Home page</strong></p>
+		<img src="assets/images/home1.jpg" alt="" />
+		<p><strong>Category page</strong></p>
+		<img src="assets/images/category1.jpg" alt="" />
+		<p><strong>Details page</strong></p>
+		<img src="assets/images/details1.jpg" alt="" />
+		<hr>
+		<section id="home2" class=nonstop><h3>#Layout2</h3></section>
+		<h4>List of Modules</h4>
+		<ul>
+			<li><a href='../modules_list/megamenu.html' target="_blank">Megamenu custommer</a></li>
+			<li><a href='../modules_list/slideshow.html' target="_blank">Pos Slideshow Slider</a></li>
+			<li><a href='../modules_list/listcategories.html' target="_blank">Pos list categories</a></li>
+			<li><a href='../modules_list/specialproducts.html' target="_blank">Pos Special Products module</a></li>
+			<li><a href='../modules_list/countdown.html' target="_blank">Pos Countdown time price</a></li>
+			<li><a href='../modules_list/newproducts.html' target="_blank">Pos New Products module</a></li>
+			<li><a href='../modules_list/featuredproducts.html' target="_blank">Pos Featured Products module</a></li>
+			<li><a href='../modules_list/suggestedproducts.html' target="_blank">Suggested Category Products</a></li>
+			<li><a href='../modules_list/categorytab.html' target="_blank"> Category Tab Slider</a></li>
+			<li><a href='../modules_list/newsletterpopup.html' target="_blank">Pos newsletter popup</a></li>
+			<li><a href='../modules_list/themeoptions.html' target="_blank">Pos Themeoptions</a></li>
+			<li><a href='../modules_list/search.html' target="_blank">Pos search products by category</a></li>
+			<li><a href='../modules_list/rotator.html' target="_blank">Rotator img</a></li>	
+			<li><a href='../modules_list/vermenu.html' target="_blank">Vertical Megamenu </a></li>	
+		</ul>
+		<h4>List of <a href='../modules_list/staticblocks.html' target="_blank">Pos Static Blocks</a></h4>
+		<ul>
+			<li>Static Cms</li>
+			<li>Home Banner</li>
+			<li>Home Banner2</li>
+			<li>static nav</li>
+			<li>Links Sale</li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticfooter.html' target="_blank">Pos Static Footer</a></h4>
+		<ul>
+			<li>Get the app</li>
+			<li>Infomation <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>Custom Links <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>My Account <i>(included <a href='#other'>My Account block</a>)</i></li>
+			<li>Contact Info <i>(included <a href='#other'>Social media follow links</a>)</i></li>
+			<li>Links Footer</li>
+			<li>Copyright Block</li>
+			<li>Payment Block</li>
+		</ul>
+		<p><strong>Home page</strong></p>
+		<img src="assets/images/home2.jpg" alt="" />
+		<p><strong>Category page</strong></p>
+		<img src="assets/images/category2.jpg" alt="" />
+		<p><strong>Details page</strong></p>
+		<img src="assets/images/details2.jpg" alt="" />
+		<hr>
+		<section id="home3" class=nonstop><h3>#Layout3</h3></section>
+		<h4>List of Modules</h4>
+		<ul>
+			<li><a href='../modules_list/megamenu.html' target="_blank">Megamenu custommer</a></li>
+			<li><a href='../modules_list/slideshow.html' target="_blank">Pos Slideshow Slider</a></li>
+			<li><a href='../modules_list/listcategories.html' target="_blank">Pos list categories</a></li>
+			<li><a href='../modules_list/listcatepro.html' target="_blank">Pos list category products</a></li>
+			<li><a href='../modules_list/specialproducts.html' target="_blank">Pos Special Products module</a></li>
+			<li><a href='../modules_list/countdown.html' target="_blank">Pos Countdown time price</a></li>
+			<li><a href='../modules_list/newsletterpopup.html' target="_blank">Pos newsletter popup</a></li>
+			<li><a href='../modules_list/themeoptions.html' target="_blank">Pos Themeoptions</a></li>
+			<li><a href='../modules_list/search.html' target="_blank">Pos search products by category</a></li>
+			<li><a href='../modules_list/rotator.html' target="_blank">Rotator img</a></li>	
+			<li><a href='../modules_list/vermenu.html' target="_blank">Vertical Megamenu </a></li>	
+		</ul>
+		<h4>List of <a href='../modules_list/staticblocks.html' target="_blank">Pos Static Blocks</a></h4>
+		<ul>
+			<li>Static Cms</li>
+			<li>Home Banner</li>
+			<li>static nav</li>
+			<li>Links Sale</li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticfooter.html' target="_blank">Pos Static Footer</a></h4>
+		<ul>
+			<li>Get the app</li>
+			<li>Infomation <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>Custom Links <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>My Account <i>(included <a href='#other'>My Account block</a>)</i></li>
+			<li>Contact Info <i>(included <a href='#other'>Social media follow links</a>)</i></li>
+			<li>Links Footer</li>
+			<li>Copyright Block</li>
+			<li>Payment Block</li>
+		</ul>
+		<p><strong>Home page</strong></p>
+		<img src="assets/images/home3.jpg" alt="" />
+		<p><strong>Category page</strong></p>
+		<img src="assets/images/category3.jpg" alt="" />
+		<p><strong>Details page</strong></p>
+		<img src="assets/images/details3.jpg" alt="" />
+		<hr>
+		<section id="home4" class=nonstop><h3>#Layout4</h3></section>
+		<h4>List of Modules</h4>
+		<ul>
+			<li><a href='../modules_list/megamenu.html' target="_blank">Megamenu custommer</a></li>
+			<li><a href='../modules_list/slideshow.html' target="_blank">Pos Slideshow Slider</a></li>
+			<li><a href='../modules_list/listcategories.html' target="_blank">Pos list categories</a></li>
+			<li><a href='../modules_list/listcatepro.html' target="_blank">Pos list category products</a></li>
+			<li><a href='../modules_list/specialproducts.html' target="_blank">Pos Special Products module</a></li>
+			<li><a href='../modules_list/countdown.html' target="_blank">Pos Countdown time price</a></li>
+			<li><a href='../modules_list/newsletterpopup.html' target="_blank">Pos newsletter popup</a></li>
+			<li><a href='../modules_list/themeoptions.html' target="_blank">Pos Themeoptions</a></li>
+			<li><a href='../modules_list/search.html' target="_blank">Pos search products by category</a></li>
+			<li><a href='../modules_list/rotator.html' target="_blank">Rotator img</a></li>	
+			<li><a href='../modules_list/vermenu.html' target="_blank">Vertical Megamenu </a></li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticblocks.html' target="_blank">Pos Static Blocks</a></h4>
+		<ul>
+			<li>Static Cms</li>
+			<li>Home Banner2</li>
+			<li>static nav</li>
+			<li>Links Sale</li>
+			<li>Banner Top</li>
+		</ul>
+		<h4>List of <a href='../modules_list/staticfooter.html' target="_blank">Pos Static Footer</a></h4>
+		<ul>
+			<li>Get the app</li>
+			<li>Infomation <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>Custom Links <i>(included <a href='#other'>Link List</a>)</i></li>
+			<li>My Account <i>(included <a href='#other'>My Account block</a>)</i></li>
+			<li>Contact Info <i>(included <a href='#other'>Social media follow links</a>)</i></li>
+			<li>Links Footer</li>
+			<li>Copyright Block</li>
+			<li>Payment Block</li>
+		</ul>
+		<p><strong>Home page</strong></p>
+		<img src="assets/images/home4.jpg" alt="" />
+		<p><strong>Category page</strong></p>
+		<img src="assets/images/category4.jpg" alt="" />
+		<p><strong>Details page</strong></p>
+		<img src="assets/images/details4.jpg" alt="" />
+		<hr>
+		<!-- End Layout -->
+
+		<!-- Upload your store logo and icon -->
+		<section id="upload_logo">
+		<div class="page-header"><h2>Upload your store logo and icon</h2></div>
+		<ol>
+			<li>Login your prestashop admin</li>
+			<li>
+				<p>Go to <strong>Design</strong> > <strong>Theme & Logo</strong></p>
+				<p><img src="assets/images/upload_logo.jpg" alt="" /></p>
+			</li>
+			<li>Upload <i>Header logo, Mail logo, Invoice logo or Favicon</i> then click "Save"</li>
+		</ol>
+		</section>
+		<!-- End Upload your store logo and icon -->
+		
+		<!-- How to contact information on header -->
+		<section id="information">
+		<div class="page-header"><h2>How to edit contact information on header</h2></div>
+		<p><img src="assets/images/ex_info.jpg" alt="" /></p>
+			<ul>
+				<li>Login your prestashop admin</li>
+				<li>Navigate to <strong>Shop Parameters</strong> > <strong>Contact</strong></li>
+				<li class="img-in"><img src="assets/images/parameters_contact.jpg" alt="" />
+				<li>Choose tab <strong>Stores</strong>. At <strong>CONTACT DETAILS</strong> section, edit contact information of your store</li>
+				<li class="img-in"><img src="assets/images/edit_info.jpg" alt="" />
+				<li>Click “<strong>Save</strong>” button to save changes</li>
+			</ul>
+		</section>
+		<!-- End How to contact information on header -->
+		
+		<!-- How to display related products on product detail page -->
+		<section id="related">
+		<div class="page-header"><h2>How to display related products on product detail page</h2></div>
+		<ol>
+			<li>Login your prestashop admin</li>
+			<li>
+				<p>Go to <strong>Catalog</strong> > <strong>Products</strong></p>
+				<p><img src="assets/images/catalog_products.jpg" alt="" /></p>
+			</li>
+			<li>
+				<p>Choose item you want to edit, click <img src="assets/images/edit.jpg" alt="" /></p>
+				<p><img src="assets/images/set_rotator1.jpg" alt="" /></p>
+			</li>
+			<li>At tab <strong>Basic settings</strong>, then click <strong>Add a related product</strong> button</li>
+			<li>
+				<p>Then search and add a related product</p>
+				<p><img src="assets/images/related_products.jpg" alt="" /></p>
+			</li>
+			<li>Click “<strong>Save</strong>” button when you finish.</li>
+		</ol>
+		</section>
+		<!-- End How to display related products on product detail page-->
+		
+		<!-- Pos Antomi's Modules -->
+		<section id="module">
+		<div class="page-header"><h2>Module Config</h2></div>	
+		<p><strong>Name and position of the modules are shown in <a href="#layout">layout</a>.</strong></p>
+		<!-- End Antomi's Module -->
+		<!-- Configure Module-->
+		</section>
+		<section id="config"><h3>General Configuration</h3>
+			<ol>
+				<li>Login your Prestashop admin</li>
+				<li>
+					<p>Go to <strong>Modules</strong> > <strong>Modules Manager</strong></p>
+					<p><img src="assets/images/modules.jpg" alt="" /></p>
+				</li>
+				<li>
+					<p>Choose “<strong>Installed modules</strong>” tab</p>
+					<p><img src="assets/images/installed_modules.jpg" alt="" /></p>
+				</li>
+				<li>
+					<p>On selected module, click "<strong>Configure</strong>" button. </p>
+					<p><img src="assets/images/config_module.jpg" alt="" /></p>
+					<p>You will get a form with parameters of the module. Let's change the specified parameter with one suitable for your theme.</p>
+				</li>
+				<li>Click “<strong>Update</strong>” button to save config.</li>
+			</ol>
+		</section>
+		<!-- End Configure Module-->
+		<!-- Prestashop Module List-->
+		<section id="module_config"><h3>Posthemes Module Configuration</h3>
+		<p><strong>Below is a list of all modules in Antomi theme. Click on the name of module you want to read configuration guide.</strong></p>
+			<ol class="custom-counter">
+				<li><a href='../modules_list/megamenu.html' target="_blank">Megamenu custommer</a></li>
+				<li><a href='../modules_list/slideshow.html' target="_blank">Pos Slideshow Slider</a></li>
+				<li><a href='../modules_list/listcategories.html' target="_blank">Pos list categories</a></li>
+				<li><a href='../modules_list/listcatepro.html' target="_blank">Pos list category products</a></li>
+				<li><a href='../modules_list/specialproducts.html' target="_blank">Pos Special Products module</a></li>
+				<li><a href='../modules_list/countdown.html' target="_blank">Pos Countdown time price</a></li>
+				<li><a href='../modules_list/newproducts.html' target="_blank">Pos New Products module</a></li>
+				<li><a href='../modules_list/featuredproducts.html' target="_blank">Pos Featured Products module</a></li>	
+				<li><a href='../modules_list/suggestedproducts.html' target="_blank">Suggested Category Products</a></li>	
+				<li><a href='../modules_list/categorytab.html' target="_blank">Category Tab Slider</a></li>	
+				<li><a href='../modules_list/staticblocks.html' target="_blank">Pos Static Blocks</a></li>	
+				<li><a href='../modules_list/staticfooter.html' target="_blank">Pos Static Footer</a></li>	
+				<li><a href='../modules_list/newsletterpopup.html' target="_blank">Pos newsletter popup</a></li>	
+				<li><a href='../modules_list/themeoptions.html' target="_blank">Pos Themeoptions</a></li>	
+				<li><a href='../modules_list/rotator.html' target="_blank">Rotator img</a></li>	
+				<li><a href='../modules_list/vermenu.html' target="_blank">Vertical Megamenu</a></li>	
+			</ol>
+		</section>
+		<!-- End Configure Module-->
+		<!-- Other modules-->
+		<section id="other"><h3>Other modules</h3>
+		<p><i>Included external modules (3rd party developers) and Prestashop module</i></p>
+		<ol>
+			<li>Xpert Blog Display Posts on Home Page
+				<ul>
+					<li><strong>About Xpert Blog Display Posts on Home Page module</strong>
+						<ul>
+							<li>Login your prestashop admin</li>
+							<li>Go to <strong>Xpert Blog</strong></li>
+							<li class="img-in"><img src="assets/images/blog1.jpg" alt="" />
+							<p>- Blog Posts : Add, Delete or Edit Posts of Blog</p>
+							<p>- Blog Categories : Add, Delete or Edit Categories of Blog</p>
+							<p>- Blog Comments : Manage Comments</p>
+							<p>- Blog Image Type : Manage type of images</p>
+						</ul>
+					</li>
+					<li><strong>Add Blog Post</strong>
+						<ul>
+							<li>Login your prestashop admin</li>
+							<li>Go to <strong>Xpert Blog</strong> > <strong>Blog Posts</strong></li>
+							<li class="img-in"><img src="assets/images/add_blog.jpg" alt="" />
+							<li class="img-in"><img src="assets/images/add_blog1.jpg" alt="" />
+							<li>Click “<strong>Save</strong>” button when you finish.</li>
+						</ul>
+					</li>
+					<li><strong>Edit Blog Post</strong>
+						<ul>
+							<li>Login your prestashop admin</li>
+							<li>Go to <strong>Xpert Blog</strong> > <strong>Blog Posts</strong></li>
+							<li>Choose item you want to edit, click <strong>Edit</strong></li>
+							<li>Then edit</li>
+							<li>Click “<strong>Save</strong>” button when you finish.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Link List
+			<p><strong>Link List</strong> allow you add a block with several links.</p>
+			<p><img src="assets/images/ad_link_list.jpg" alt="" /></p>
+			<p><img src="assets/images/ad_link_list2.jpg" alt="" /></p>
+			<p><img src="assets/images/ad_link_list3.jpg" alt="" /></p>		
+			<p><strong>Note</strong>: After that, ticking the checkbox to display link on homepage</p>
+			</li>
+			<li>Newsletter subscription
+			<p><img src="assets/images/ad_newsletter.jpg" alt="" /></p>
+			</li>
+			<li>Faceted search
+			<p> Displays a block allowing multiple filters.</p>
+			<p><img src="assets/images/ad_faceted.jpg" alt="" /></p>
+			</li>
+			<li>Products in the same category
+			<p><strong>Products in the same category</strong> show products on the same category.</p>
+			<p><img src="assets/images/ad_product_category.jpg" alt="" /></p>	
+			</li>
+			<li>Social media follow links  
+			<p><strong>Social media follow links</strong> allows you to add information about your brand's social networking accounts</p>
+			<p><img src="assets/images/ad_social.jpg" alt="" /></p>	
+			</li>
+			<li>Social media share buttons
+			<p><img src="assets/images/ex_social_media_share.jpg" alt="" /></p>
+			<p><strong>Social media share buttons</strong> displays social media sharing buttons (Twitter, Facebook, Google+ and Pinterest) on every product page</p>
+			<p><img src="assets/images/ad_social_button.jpg" alt="" /></p>	
+			</li>
+			<li>Customer reassurance
+			<p><img src="assets/images/ex_customer_reassurance.jpg" alt="" /></p>
+			<p><strong>Customer reassurance</strong> module offering helpful information to reassure customers that your store is trustworthy.</p>
+			<p><img src="assets/images/ad_customer_reassurance.jpg" alt="" /></p>	
+			</li>
+			<li>My Account block
+			<p>Choose “<strong>Disable</strong>” if you don’t want to use My account block module.</p>
+			<p><img src="assets/images/ad_myaccount.jpg" alt="" /></p>
+			</li>
+			<li>Category tree links
+			<p><strong>Category tree links</strong> displays a block featuring product categories</p>
+			<p><img src="assets/images/ad_category.jpg" alt="" /></p>	
+			</li><li>Tags block
+			<p><img src="assets/images/ad_tags.jpg" alt="" /></p>	
+			<p><strong>* How to add tags</strong></p>
+				<ul>
+					<li>Login your prestashop admin</li>
+					<li>Navigate to <strong>Shop Parameters</strong>><strong>Search</strong></li>
+					<li class="img-in"><img src="assets/images/parameters_search.jpg" alt="" />
+					<li class="img-in"><img src="assets/images/tag.jpg" alt="" />
+				</ul>
+			<p><strong>* How to manage Product Tags</strong></p>
+				<ul>
+					<li>Login your prestashop admin</li>
+					<li>Navigate to <strong>Catalog</strong>><strong>Products</strong></li>
+					<li class="img-in"><img src="assets/images/catalog_products.jpg" alt="" />
+					<li>Choose product you want to edit, click <strong>Edit</strong></li>
+					<li>Choose tab “<strong>Options</strong>”</li>
+					<li>From the Options data tab, look for <strong>Tags</strong> and add more tag for the selected products.</li>
+					<li class="img-in"><img src="assets/images/tag2.jpg" alt="" />
+					<li>Click “<strong>Save</strong>” button when you finish.</li>
+				</ul>
+			</li>
+		</ol>
+		</section>
+		<!-- End Other modules-->
+		<!-- End Pos Antomi 's Modules -->
+		
+		<!-- Translate theme-->
+		<section id="translate">
+		<div class="page-header"><h2>Translate Antomi theme</h2></div>
+		<!-- Back office translations-->
+		<section id="theme"><h3>Back office translations</h3>
+		<ul>
+			<li> Login your prestashop admin</li>
+			<li> Go to <strong>International</strong> > <strong>Translations</strong></li>
+			<li class="img-in"><img src="assets/images/international_translations.jpg" alt="" />
+			<li>At "<strong>Modify translations</strong>" section:
+				<ul>
+					<li><strong>Type of translation</strong> : <i>Back office translations</i></li>
+					<li><strong>Select your language</strong> : Choose language you want to translate</li>
+				</ul>
+			</li>
+			<li>Choose <strong>Modify</strong></li>
+			<li>Then search <i>text</i> need translate</li>
+			<li class="img-in"><img src="assets/images/back_office.jpg" alt="" />
+			<li>After typing your language, click <strong>Save</strong> to finish.</li>
+			<li><strong>Note:</strong> To find more informations, please read on <i><a rel="nofollow" href="http://doc.prestashop.com/display/PS17/Translations">http://doc.prestashop.com/display/PS17/Translations</a></i>
+		</ul>
+		</section>
+		<!-- End Back office translations-->
+		<!-- Themes translations-->
+		<section id="theme_trans"><h3>Themes Translations</h3>
+			<ul>
+				<li> Login your prestashop admin</li>
+				<li> Go to <strong>International</strong> > <strong>Translations</strong></li>
+				<li class="img-in"><img src="assets/images/modules_translations.jpg" alt="" />
+				<li>At "<strong>Modify translations</strong>" section:
+					<ul>
+						<li><strong>Type of translation</strong> : <i>Themes translations</i></li>
+						<li><strong>Select your theme</strong> : Select theme you want to translate</li>
+						<li><strong>Select your language</strong> : Choose language you want to translate</li>
+					</ul>
+				</li>
+				<li>Choose <strong>Modify</strong></li>
+				<li>Then Search <i>titles</i> or <i>text</i> need translate</li>
+				<li>After typing your language, click <strong>Save and stay</strong> or <strong>Save</strong> to finish.</li>
+				<li><strong>Note:</strong> To find more informations, please read on <i><a rel="nofollow" href="http://doc.prestashop.com/display/PS17/Translations">http://doc.prestashop.com/display/PS17/Translations</a></i>
+			</ul>
+		</section>
+		<!-- End Themes translations-->
+		<!-- Translate module content-->
+		<section id="module_content"><h3>Translate module content</h3>
+		<h4>1. Pos Staticblocks</h4>
+			<ul>
+				<li>Login your prestashop admin</li>
+				<li>Go to <strong>Design</strong> > <strong>Pos Staticblocks</strong>
+				<li class="img-in"><img src="assets/images/staticblocks.jpg" alt="" />
+				<li>Click "<strong>Edit</strong>" button of your selected block.</li>
+				<li class="img-in"><img src="assets/images/staticblocks2.jpg" alt="" />
+				<li>Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" /> to show code HTML of this block in <strong>English</strong>. Then copy source code. </li>
+				<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate</li>
+				<li>Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" /> and paste code HTML. Then translate</li>
+				<li>Click <strong>Save</strong> button when you finish</li>
+			</ul>
+		<h4>2. Pos Staticfooter</h4>
+			<ul>
+				<li>Login your prestashop admin</li>
+				<li>Go to <strong>Design</strong> > <strong>Pos Staticfooter</strong>
+				<li class="img-in"><img src="assets/images/staticfooter.jpg" alt="" />
+				<li>Click "<strong>Edit</strong>" button of your selected block.</li>
+				<li class="img-in"><img src="assets/images/staticfooter2.jpg" alt="" />
+				<li>Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" /> to show code HTML of this block in <strong>English</strong>. Then copy source code. </li>
+				<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate</li>
+				<li>Choose <strong>Source Code</strong> <img src="assets/images/source_code.jpg" alt="" /> and paste code HTML. Then translate</li>
+				<li>Click <strong>Save</strong> button when you finish</li>
+			</ul>
+		<h4>3. Megamenu custommer</h4>
+			<ul>
+				<li>Login your prestashop admin</li>
+				<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+				<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+				<li>Choose “<strong>Installed modules</strong>” tab
+				<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+				<li>On <strong>Megamenu custommer</strong> module, click "<strong>Configure</strong>" button. </li>
+				<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+				<li>Click "<strong>Edit</strong>" button of your selected menu item.</li>
+				<li class="img-in"><img src="assets/images/megamenu_trans.jpg" alt="" />
+				<li>Click <img src="assets/images/lang.jpg" alt="" /> to choose language you want to translate.</li>
+				<li class="img-in"><img src="assets/images/megamenu_trans2.jpg" alt="" />
+				<li>At <strong>Title</strong>, translate the menu item.</li>
+				<li>Click <strong>Save</strong> button when you finish</li>
+			</ul>
+		<h4>4. Pos Slideshow Slider</h4>
+			<ul>
+				<li>Login your prestashop admin. Click "<strong>All shop</strong>", select the theme you want to translate</li>
+				<li class="img-in"><img src="assets/images/select_theme.jpg" alt="" />
+				<li>Go to <strong>Modules</strong> > <strong>Modules Manager</strong>
+				<li class="img-in"><img src="assets/images/modules.jpg" alt="" />
+				<li>Choose “<strong>Installed modules</strong>” tab
+				<li class="img-in"><img src="assets/images/installed_modules.jpg" alt="" />
+				<li>On <strong>Pos Slideshow Slider</strong> module, click "<strong>Configure</strong>" button. </li>
+				<li class="img-in"><img src="assets/images/config_module.jpg" alt="" />
+				<li>At <strong>SLIDES LIST</strong> section, click "<strong>Edit</strong>" button of your selected slide.</li>
+				<li class="img-in"><img src="assets/images/slides_list.jpg" alt="" />
+				<li>Choose other language of each value of parameters (<i>Slide title, Caption or Description</i>) to translate.</li>
+				<li class="img-in"><img src="assets/images/edit_slide.jpg" alt="" />
+				<li>Enter your language & click <strong>Save</strong> button when you finish</li>
+			</ul>
+		</section>
+		<!-- End Translate module content-->
+		</section>
+		<!-- End Translate theme -->
+		<!-- Posthemes Support-->
+		<section id="support">
+		<div class="page-header"><h2>Posthemes Support</h2></div>
+		<p>Support Working time: Monday - Friday</p>
+		<p>Estimated ticket and answers review time: 1-3 business days.</p>
+		<p>We have hundreds of questions and provide answers asap, but this can take up to 3 days after your submitted request. Please be patient and wait for answer.</p>
+		<p><i>Send us email to <a href="mailto:posthemes@gmail.com">posthemes@gmail.com</a>.</i></p>
+		</section>
+		</div>
+	</div>
+	<span id="back-top"><a href="javascript:void(0);"><span class="icon fa fa-arrow-up"></span></a></span>
+</body>
+</html>
